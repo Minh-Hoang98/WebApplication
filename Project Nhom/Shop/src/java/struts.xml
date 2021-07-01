@@ -1,0 +1,44 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <!-- Configuration for the default package. -->
+    <package name="default" extends="struts-default">
+        <action name="login" class="controller.LoginAction">
+            <result name="success">/info.jsp</result>
+            <result name="login">/login.jsp</result>
+            <result name="input">/login.jsp</result>
+        </action>
+        
+        <action name="list" class="controller.ProductListAction">
+            <result name="success">/listProduct.jsp</result>
+        </action>
+
+        <action name="logout" class="controller.LogoutAction">
+            <result name="success">/logout.jsp</result>
+            <result name="login">/login.jsp</result>
+        </action>
+
+
+        <action name="buy" class="controller.BuyProductAction">
+            <result name="success">/listProduct.jsp</result>
+        </action>
+
+        <action name="remove" class="controller.RemoveAction">
+            <result name="success">/viewcart.jsp</result>
+        </action>
+        
+        <action name="viewcart" class="controller.ViewCartAction">
+            <result name="success">/viewcart.jsp</result>
+        </action>
+        
+        <action name="order" class="controller.OrderAction">
+            <result name="success">/vieworder.jsp</result>
+            <result name="login">/login.jsp</result>
+            <result name="shopping">/listProduct.jsp</result>
+            <result name="error">/listProduct.jsp</result>
+        </action>
+        
+    </package>
+</struts>
